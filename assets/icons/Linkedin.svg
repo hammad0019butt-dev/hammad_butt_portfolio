@@ -1,0 +1,25 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="0" y="-5" width="96" height="101"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(10px);clip-path:url(#bgblur_0_1689_31_clip_path);height:100%;width:100%"></div></foreignObject><g filter="url(#filter0_d_1689_31)" data-figma-bg-blur-radius="20">
+<rect x="24" y="15" width="48" height="48" rx="24" fill="#EFEFEF" fill-opacity="0.1" shape-rendering="crispEdges"/>
+<rect x="24.5" y="15.5" width="47" height="47" rx="23.5" stroke="url(#paint0_linear_1689_31)" shape-rendering="crispEdges"/>
+<path d="M41.3333 45.6667V36.3333M60 33.6667V44.3333C60 46.1014 59.2976 47.7971 58.0474 49.0474C56.7971 50.2976 55.1014 51 53.3333 51H42.6667C40.8986 51 39.2029 50.2976 37.9526 49.0474C36.7024 47.7971 36 46.1014 36 44.3333V33.6667C36 31.8986 36.7024 30.2029 37.9526 28.9526C39.2029 27.7024 40.8986 27 42.6667 27H53.3333C55.1014 27 56.7971 27.7024 58.0474 28.9526C59.2976 30.2029 60 31.8986 60 33.6667Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M46.6668 45.6667V41.3333M46.6668 41.3333V36.3333M46.6668 41.3333C46.6668 36.3333 54.6668 36.3333 54.6668 41.3333V45.6667M41.3335 32.3467L41.3468 32.332" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_d_1689_31" x="0" y="-5" width="96" height="101" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="9"/>
+<feGaussianBlur stdDeviation="12"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1689_31"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1689_31" result="shape"/>
+</filter>
+<clipPath id="bgblur_0_1689_31_clip_path" transform="translate(0 5)"><rect x="24" y="15" width="48" height="48" rx="24"/>
+</clipPath><linearGradient id="paint0_linear_1689_31" x1="27.4634" y1="15" x2="74.8863" y2="55.5794" gradientUnits="userSpaceOnUse">
+<stop stop-color="#787878" stop-opacity="0"/>
+<stop offset="0.745259" stop-color="#787878" stop-opacity="0.54"/>
+</linearGradient>
+</defs>
+</svg>

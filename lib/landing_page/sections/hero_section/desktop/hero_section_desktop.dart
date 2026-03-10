@@ -7,9 +7,18 @@ import 'package:hammad_butt/utils/styles/custom_images/custom_assets.dart';
 import 'package:hammad_butt/widgets/quick_link_icons/quick_links_desktop.dart';
 import 'package:hammad_butt/widgets/rich_text/custom_heading_text.dart';
 import 'package:solar_icons/solar_icons.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HeroSectionDesktop extends StatelessWidget {
   const HeroSectionDesktop({super.key});
+
+  Future<void> _operUrl(String url) async {
+    final Uri uri = Uri.parse(url);
+
+    if (!await launchUrl(uri, mode: LaunchMode.inAppBrowserView)) {
+      throw Exception('Could not Launch $url');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,13 +49,52 @@ class HeroSectionDesktop extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  HQuickLinksDesktop(linkIcon: FontAwesomeIcons.linkedin),
+                  GestureDetector(
+                    onTap: () {
+                      _operUrl(
+                        'https://www.linkedin.com/in/hammad-butt-1576203b2/',
+                      );
+                    },
+                    child: HQuickLinksDesktop(
+                      linkIcon: FontAwesomeIcons.linkedin,
+                    ),
+                  ),
+
                   SizedBox(width: 16),
-                  HQuickLinksDesktop(linkIcon: FontAwesomeIcons.upwork),
+
+                  GestureDetector(
+                    onTap: () {
+                      _operUrl(
+                        'https://www.upwork.com/freelancers/~014b7fdfe597aa027b',
+                      );
+                    },
+                    child: HQuickLinksDesktop(
+                      linkIcon: FontAwesomeIcons.upwork,
+                    ),
+                  ),
+
                   SizedBox(width: 16),
-                  HQuickLinksDesktop(linkIcon: FontAwesomeIcons.behance),
+
+                  GestureDetector(
+                    onTap: () {
+                      _operUrl('https://www.behance.net/httphammadbutt20');
+                    },
+                    child: HQuickLinksDesktop(
+                      linkIcon: FontAwesomeIcons.behance,
+                    ),
+                  ),
+
                   SizedBox(width: 16),
-                  HQuickLinksDesktop(linkIcon: FontAwesomeIcons.github),
+
+                  GestureDetector(
+                    onTap: () {
+                      _operUrl('https://github.com/hammad0019butt-dev');
+                    },
+                    child: HQuickLinksDesktop(
+                      linkIcon: FontAwesomeIcons.github,
+                    ),
+                  ),
+
                   SizedBox(width: 16),
                 ],
               ),

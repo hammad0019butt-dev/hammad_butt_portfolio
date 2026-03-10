@@ -6,9 +6,18 @@ import 'package:hammad_butt/utils/styles/buttons/outlined_button.dart';
 import 'package:hammad_butt/widgets/quick_link_icons/quick_links_mobile.dart';
 import 'package:hammad_butt/widgets/rich_text/custom_heading_text.dart';
 import 'package:solar_icons/solar_icons.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HHeroSectionMonile extends StatelessWidget {
   const HHeroSectionMonile({super.key});
+
+  Future<void> _operUrl(String url) async {
+    final Uri uri = Uri.parse(url);
+
+    if (!await launchUrl(uri, mode: LaunchMode.inAppBrowserView)) {
+      throw Exception('Could not Launch $url');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,19 +58,39 @@ class HHeroSectionMonile extends StatelessWidget {
           padding: const EdgeInsets.only(left: 24.0),
           child: Row(
             children: [
-              HQuickLinksMobile(linkIcon: FontAwesomeIcons.linkedin),
+              GestureDetector(
+                onTap: () {
+                  _operUrl('https://www.linkedin.com/in/hammad-butt-1576203b2/');
+                },
+                child: HQuickLinksMobile(linkIcon: FontAwesomeIcons.linkedin),
+              ),
 
               SizedBox(width: 16),
 
-              HQuickLinksMobile(linkIcon: FontAwesomeIcons.upwork),
+              GestureDetector(
+                onTap: () {
+                  _operUrl('https://www.upwork.com/freelancers/~014b7fdfe597aa027b');
+                },
+                child: HQuickLinksMobile(linkIcon: FontAwesomeIcons.upwork),
+              ),
 
               SizedBox(width: 16),
 
-              HQuickLinksMobile(linkIcon: FontAwesomeIcons.behance),
+              GestureDetector(
+                onTap: () {
+                  _operUrl('https://www.behance.net/httphammadbutt20');
+                },
+                child: HQuickLinksMobile(linkIcon: FontAwesomeIcons.behance),
+              ),
 
               SizedBox(width: 16),
 
-              HQuickLinksMobile(linkIcon: FontAwesomeIcons.github),
+              GestureDetector(
+                onTap: () {
+                  _operUrl('https://github.com/hammad0019butt-dev');
+                },
+                child: HQuickLinksMobile(linkIcon: FontAwesomeIcons.github),
+              ),
             ],
           ),
         ),

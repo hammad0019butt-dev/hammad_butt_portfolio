@@ -20,6 +20,7 @@ class _HQuickLinksMobileState extends State<HQuickLinksMobile> {
       builder: (context, constraints) {
         return BackdropFilter(
           filter: ImageFilter.blur(),
+          
           child: MouseRegion(
             cursor: SystemMouseCursors.click,
             onEnter: (event) => setState(() {

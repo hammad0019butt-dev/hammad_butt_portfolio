@@ -77,8 +77,8 @@ class HHeroSectionMonile extends StatelessWidget {
               HElevatedButton(
                 onTap: () {},
                 buttonColor: HColors.primaryButton,
-                buttonPaddingHor: 24,
-                buttonPaddingVer: 16,
+                buttonPaddingHor: 20,
+                buttonPaddingVer: 14,
                 textWeight: FontWeight.w800,
                 text: 'Hire Me',
                 textColor: HColors.background,
@@ -94,8 +94,8 @@ class HHeroSectionMonile extends StatelessWidget {
               // Outlined Button (Download Resume)
               HOutlinedButton(
                 onTap: () {},
-                buttonPaddingHor: 24,
-                buttonPaddingVer: 16,
+                buttonPaddingHor: 20,
+                buttonPaddingVer: 14,
                 textWeight: FontWeight.w500,
                 text: 'Download Resume',
                 textColor: HColors.secondaryText,

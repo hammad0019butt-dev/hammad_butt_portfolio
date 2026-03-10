@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
 
-                        SizedBox(height: 84),
+                        SizedBox(height: 54),
 
                         // ------ Hero Secton ------ //
                         constraints.maxWidth >= 600.0

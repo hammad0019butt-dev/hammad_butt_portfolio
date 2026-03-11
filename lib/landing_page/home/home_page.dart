@@ -10,8 +10,6 @@ import 'package:hammad_butt/widgets/custom_about_me/custom_about_me_desktop.dart
 import 'package:hammad_butt/widgets/custom_about_me/custom_about_me_mobile.dart';
 import 'package:hammad_butt/widgets/header/header_desktop.dart';
 import 'package:hammad_butt/widgets/header/header_mobile.dart';
-import 'package:hammad_butt/widgets/skills_animated_containers/animated_skill_container.dart';
-import 'package:solar_icons/solar_icons.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

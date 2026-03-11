@@ -82,7 +82,7 @@ class _HSkillCounterState extends State<HSkillCounter>
 
         Text(
           widget.title,
-          style: TextStyle(fontSize: 18, color: HColors.secondaryText),
+          style: TextStyle(fontSize: 18, color: HColors.primaryColor),
         ),
       ],
     );

@@ -14,7 +14,7 @@ class SkillsMobile extends StatelessWidget {
         Text(
           'SKILLS',
           style: TextStyle(
-            color: HColors.primaryText,
+            color: HColors.primaryColor,
             fontSize: 22,
             fontWeight: FontWeight.w700,
           ),

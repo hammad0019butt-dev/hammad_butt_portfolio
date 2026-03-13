@@ -3,6 +3,8 @@ import 'package:hammad_butt/landing_page/sections/about_section/desktop/skills_d
 import 'package:hammad_butt/landing_page/sections/about_section/mobile/skills_mobile.dart';
 import 'package:hammad_butt/landing_page/sections/hero_section/desktop/hero_section_desktop.dart';
 import 'package:hammad_butt/landing_page/sections/hero_section/mobile/hero_section_mobile.dart';
+import 'package:hammad_butt/landing_page/sections/services_section/services_flutter_dev.dart';
+import 'package:hammad_butt/landing_page/sections/services_section/services_ui_ux.dart';
 import 'package:hammad_butt/utils/constants/colors.dart';
 import 'package:hammad_butt/utils/styles/custom_images/custom_assets.dart';
 import 'package:hammad_butt/widgets/app_drower/app_drawer.dart';
@@ -10,6 +12,8 @@ import 'package:hammad_butt/widgets/custom_about_me/custom_about_me_desktop.dart
 import 'package:hammad_butt/widgets/custom_about_me/custom_about_me_mobile.dart';
 import 'package:hammad_butt/widgets/header/header_desktop.dart';
 import 'package:hammad_butt/widgets/header/header_mobile.dart';
+import 'package:hammad_butt/widgets/services_heading/service_heading.dart';
+import 'package:hammad_butt/widgets/services_heading/service_heading_mobile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -139,7 +143,15 @@ class _HomePageState extends State<HomePage> {
                               ? HCustomAboutMe()
                               : HCustomAboutMeMobile(),
 
-                          SizedBox(height: 44),
+                          SizedBox(height: 26),
+
+                          Container(
+                            width: 400,
+                            height: 4,
+                            decoration: BoxDecoration(color: HColors.container),
+                          ),
+
+                          SizedBox(height: 22),
                           // ---- Skills (Row Widgets) ---- //
                           constraints.maxWidth >= 600.0
                               ? SkillsDesktop()
@@ -153,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                       child: Container(
                         width: constraints.maxWidth >= 600.0 ? 1900 : 800,
                         height: 2,
-                        decoration: BoxDecoration(color: HColors.primaryColor),
+                        decoration: BoxDecoration(color: HColors.container),
                       ),
                     ),
                   ],
@@ -161,24 +173,85 @@ class _HomePageState extends State<HomePage> {
               ),
 
               // ----------------- SERVICES PAGE -------------- //
-              Container(
+              SizedBox(
                 width: double.maxFinite,
-                height: 850,
-                color: HColors.container,
+                height: 950,
+                child: Column(
+                  children: [
+                    // ---- Main Heading (SERVICES) ---- //
+                    constraints.maxWidth >= 600.0
+                        ? HServicesHeading()
+                        : HServicesHeadingMobile(),
+
+                    SizedBox(height: constraints.maxWidth >= 600.0 ? 34 : 24),
+
+                    // ---- UI/UX Design Services ---- //
+                    Column(
+                      children: [
+                        //
+                        // --- UI/UX Design (Web & Mobile) --- //
+                        Text(
+                          'UI/UX Design (Web & App)',
+                          style: TextStyle(
+                            fontSize: constraints.maxWidth >= 600.0 ? 24 : 18,
+                            color: HColors.secondaryText,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: constraints.maxWidth >= 600.0 ? 20 : 16,
+                        ),
+
+                        // ---GridView for list widgets --- //
+                        ServicesUiUx(),
+                      ],
+                    ),
+
+                    SizedBox(height: constraints.maxWidth >= 600.0 ? 34 : 24),
+
+                    // ---- Flutter Development Services ---- //
+                    Column(
+                      children: [
+                        //
+                        // --- Flutter App Development (Heading) --- //
+                        Text(
+                          'Flutter App Development',
+                          style: TextStyle(
+                            fontSize: constraints.maxWidth >= 600.0 ? 24 : 18,
+                            color: HColors.secondaryText,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: constraints.maxWidth >= 600.0 ? 24 : 18,
+                        ),
+
+                        // ---GridView for list widgets --- //
+                        ServicesFlutterDev(),
+                      ],
+                    ),
+                  ],
+                ),
               ),
 
               // ----------------- WORKS PAGE ----------------- //
-              SizedBox(width: double.maxFinite, height: 850),
-
-              // ----------------- CONTACT PAGE --------------- //
               Container(
                 width: double.maxFinite,
                 height: 850,
                 color: HColors.container,
               ),
 
-              // ----------------- FOOTER PAGE ---------------- //
-              SizedBox(width: double.maxFinite, height: 160),
+              // ----------------- Contact PAGE ---------------- //
+              SizedBox(width: double.maxFinite, height: 850),
+
+              // ----------------- FOOTER PAGE --------------- //
+              Container(
+                width: double.maxFinite,
+                height: 160,
+                color: HColors.container,
+              ),
               //
             ],
           ),

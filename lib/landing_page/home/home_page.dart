@@ -175,64 +175,66 @@ class _HomePageState extends State<HomePage> {
               // ----------------- SERVICES PAGE -------------- //
               SizedBox(
                 width: double.maxFinite,
-                height: 950,
-                child: Column(
-                  children: [
-                    // ---- Main Heading (SERVICES) ---- //
-                    constraints.maxWidth >= 600.0
-                        ? HServicesHeading()
-                        : HServicesHeadingMobile(),
+                height: constraints.maxWidth >= 600.0 ? 950 : 800,
+                child: Center(
+                  child: Column(
+                    children: [
+                      // ---- Main Heading (SERVICES) ---- //
+                      constraints.maxWidth >= 600.0
+                          ? HServicesHeading()
+                          : HServicesHeadingMobile(),
 
-                    SizedBox(height: constraints.maxWidth >= 600.0 ? 34 : 24),
+                      SizedBox(height: constraints.maxWidth >= 600.0 ? 34 : 24),
 
-                    // ---- UI/UX Design Services ---- //
-                    Column(
-                      children: [
-                        //
-                        // --- UI/UX Design (Web & Mobile) --- //
-                        Text(
-                          'UI/UX Design (Web & App)',
-                          style: TextStyle(
-                            fontSize: constraints.maxWidth >= 600.0 ? 24 : 18,
-                            color: HColors.secondaryText,
-                            fontWeight: FontWeight.w600,
+                      // ---- UI/UX Design Services ---- //
+                      Column(
+                        children: [
+                          //
+                          // --- UI/UX Design (Web & Mobile) --- //
+                          Text(
+                            'UI/UX Design (Web & App)',
+                            style: TextStyle(
+                              fontSize: constraints.maxWidth >= 600.0 ? 24 : 18,
+                              color: HColors.secondaryText,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
-                        ),
 
-                        SizedBox(
-                          height: constraints.maxWidth >= 600.0 ? 20 : 16,
-                        ),
-
-                        // ---GridView for list widgets --- //
-                        ServicesUiUx(),
-                      ],
-                    ),
-
-                    SizedBox(height: constraints.maxWidth >= 600.0 ? 34 : 24),
-
-                    // ---- Flutter Development Services ---- //
-                    Column(
-                      children: [
-                        //
-                        // --- Flutter App Development (Heading) --- //
-                        Text(
-                          'Flutter App Development',
-                          style: TextStyle(
-                            fontSize: constraints.maxWidth >= 600.0 ? 24 : 18,
-                            color: HColors.secondaryText,
-                            fontWeight: FontWeight.w600,
+                          SizedBox(
+                            height: constraints.maxWidth >= 600.0 ? 20 : 16,
                           ),
-                        ),
 
-                        SizedBox(
-                          height: constraints.maxWidth >= 600.0 ? 24 : 18,
-                        ),
+                          // ---GridView for list widgets --- //
+                          ServicesUiUx(),
+                        ],
+                      ),
 
-                        // ---GridView for list widgets --- //
-                        ServicesFlutterDev(),
-                      ],
-                    ),
-                  ],
+                      SizedBox(height: constraints.maxWidth >= 600.0 ? 34 : 24),
+
+                      // ---- Flutter Development Services ---- //
+                      Column(
+                        children: [
+                          //
+                          // --- Flutter App Development (Heading) --- //
+                          Text(
+                            'Flutter App Development',
+                            style: TextStyle(
+                              fontSize: constraints.maxWidth >= 600.0 ? 24 : 18,
+                              color: HColors.secondaryText,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+
+                          SizedBox(
+                            height: constraints.maxWidth >= 600.0 ? 24 : 18,
+                          ),
+
+                          // ---GridView for list widgets --- //
+                          ServicesFlutterDev(),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
 
